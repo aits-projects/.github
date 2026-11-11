@@ -1,0 +1,69 @@
+{
+  "name": "خلل تقني | Technical bug",
+  "description": "بلاغ قابل لإعادة الإنتاج؛ لا يحل محل مهمة ClickUp أو طلب المساعدة.",
+  "title": "[Bug] ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "هذا النموذج للتشخيص التقني. ClickUp للمسؤول والأولوية والموعد والاكتمال، وDiscord للأسئلة والمساعدة. لا تنشر أسرارًا أو بيانات طلاب أو روابط داخلية. للإبلاغ عن ثغرة، استخدم المسار الخاص المعتمد للمشروع بدل Issue عامة؛ إن لم تعرفه، اطلبه من مسؤول المستودع دون نشر التفاصيل."
+      }
+    },
+    {
+      "type": "input",
+      "id": "summary",
+      "attributes": {"label": "ملخص المشكلة | Summary", "description": "جملة قصيرة توضح الخلل وأثره."},
+      "validations": {"required": true}
+    },
+    {
+      "type": "textarea",
+      "id": "reproduction",
+      "attributes": {"label": "خطوات إعادة الإنتاج | Steps to reproduce", "description": "خطوات مرقمة بأقل مثال ممكن وبيانات اصطناعية؛ إن كان متقطعًا اذكر ذلك."},
+      "validations": {"required": true}
+    },
+    {
+      "type": "textarea",
+      "id": "expected",
+      "attributes": {"label": "السلوك المتوقع | Expected", "description": "ما النتيجة التي يفترض أن تحدث؟"},
+      "validations": {"required": true}
+    },
+    {
+      "type": "textarea",
+      "id": "actual",
+      "attributes": {"label": "السلوك الفعلي | Actual", "description": "ما الذي حدث فعلًا؟ اذكر رسالة الخطأ بعد تنقيحها إن وجدت."},
+      "validations": {"required": true}
+    },
+    {
+      "type": "textarea",
+      "id": "environment",
+      "attributes": {"label": "البيئة | Environment", "description": "نسخة التطبيق أو commit، ونظام التشغيل والمتصفح أو runtime عند الصلة. لا أسماء أجهزة أو مستخدمين أو عناوين داخلية."},
+      "validations": {"required": true}
+    },
+    {
+      "type": "textarea",
+      "id": "evidence",
+      "attributes": {"label": "دليل منقّح | Redacted evidence", "description": "اختياري: سجل مختصر أو صورة بعد إزالة الرموز والبيانات الشخصية وروابط الخدمات الخاصة. لا ترفق ملفات أصلية حساسة."},
+      "validations": {"required": false}
+    },
+    {
+      "type": "input",
+      "id": "task-reference",
+      "attributes": {"label": "مرجع ClickUp | Related task", "description": "اختياري: مرجع غير حساس أو رابط مسموح للنشر فقط. لا تضع رابط مهمة خاصة في Issue عامة."},
+      "validations": {"required": false}
+    },
+    {
+      "type": "textarea",
+      "id": "tested",
+      "attributes": {"label": "ما جُرّب حتى الآن؟ | Already tested", "description": "الفحوص أو الحلول التي جربتها ونتائجها الفعلية؛ اكتب لم أجرب بعد إن لم تنفذ أي فحص."},
+      "validations": {"required": true}
+    },
+    {
+      "type": "checkboxes",
+      "id": "safety",
+      "attributes": {
+        "label": "مراجعة المحتوى | Safety check",
+        "options": [{"label": "راجعت النص والمرفقات: لا أسرار أو بيانات شخصية أو روابط داخلية غير مصرح بها، وهذا ليس كشفًا علنيًا لثغرة.", "required": true}]
+      }
+    }
+  ]
+}
